@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -8,32 +7,34 @@
 <title>PhoneGap Button Example</title>
 	<!-- Incluimos los archivos de estilos y liberías jQuery -->
 
-<script type=”text/javascript” charset=”utf-8” src=”phonegap.js”></script> 
-<script type=”text/javascript” charset=”utf-8”> 
-document.addEventListener(“deviceready”, onDeviceReady, false);
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script> 
+<script type="text/javascript" charset="utf-8"> 
+document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-document.addEventListener(“searchbutton”, onSearch, false);
-document.addEventListener(“menubutton”, onMenuButton, false); 
-document.addEventListener(“backbutton”, onBackButton, false); }
+document.addEventListener("searchbutton", onSearch, false);
+document.addEventListener("menubutton", onMenuButton, false); 
+document.addEventListener("backbutton", onBackButton, false); }
 
- function onBackButton() { alert(“You hit the back button!”); }
+ function onBackButton() { alert("You hit the back button!"); }
 
- function onMenuButton() { alert(“You hit the menu button!”); }
+ function onMenuButton() { alert("You hit the menu button!"); }
 
 
 
-function onSearchButton() { alert(“You hit the search button!”); }
+function onSearchButton() { alert("You hit the search button!"); }
 
 </script>
 	</head>
 	<body>
-		<label for="lista-opciones" class="select" style="width:50px; height:50px;">Elige una opción</label>
-		<select name="lista" id="lista-opciones">
-		   <option value="1">Opción 1</option>
-		   <option value="2">Opción 2</option>
-		   <option value="3">Opción 3</option>
-		   <option value="4">Opción 4</option>
-		</select>
+		<div data-role="page"  id="page">
+        <div data-role="header"  id="page">
+        <ul>
+        <li><a href="#page">Inicio</a></li>
+        <li><a href="#page2">Usuarios</a></li>
+        </ul>
+        </div>
+         <div data-role="content"></div>
+         </div>
 	</body>
 </html>
