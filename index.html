@@ -6,12 +6,23 @@
 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
 	<script src="jquery-1.7.2.min"></script>
 	<script src="jquery.mobile-1.1.0.min.js"></script>
-	<script type=”text/javascript” charset=”utf-8” src=”phonegap.js”></script>
-<script type=”text/javascript” charset=”utf-8”>
-
+<script type=”text/javascript” charset=”utf-8” src=”phonegap.js”></script> 
+<script type=”text/javascript” charset=”utf-8”> 
 document.addEventListener(“deviceready”, onDeviceReady, false);
 
-function onDeviceReady() { alert("Dispositivo Listo"); }
+function onDeviceReady() {
+document.addEventListener(“searchbutton”, onSearch, false);
+document.addEventListener(“menubutton”, onMenuButton, false); 
+document.addEventListener(“backbutton”, onBackButton, false); }
+
+ function onBackButton() { alert(“You hit the back button!”); }
+
+ function onMenuButton() { alert(“You hit the menu button!”); }
+
+
+
+function onSearchButton() { alert(“You hit the search button!”); }
+
 </script>
 	</head>
 	<body>
